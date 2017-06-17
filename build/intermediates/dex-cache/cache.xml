@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a38fbe60f8e490da16f3eb0993850af4fd0dd97b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="989eec7015d4f63e0b80a56f10d7bc511bf7872a">
+        <dex dex="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_909ec8313bbac535c9c83b6b3df63160cb69c72b/classes.dex" />
+    </item>
+
+</items>

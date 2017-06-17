@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wdt.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"/>
+    <ImageView
+        android:id="@+id/bDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="67dp"
+        android:src="@drawable/arrowdownimg" />
+
+    <ImageView
+        android:id="@+id/bUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowupimg"
+        android:layout_above="@+id/bDown"
+        android:layout_alignRight="@+id/tvLine2"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="Arial"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/tvLine1"
+        android:layout_alignLeft="@+id/tvLine1" />
+
+    <CheckBox
+        android:id="@+id/cbAppMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_light"
+        android:text="Xicoy V6"
+        android:layout_toRightOf="@+id/bUp"
+        android:layout_toLeftOf="@+id/bMinus"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignBottom="@+id/bUp" />
+
+    <ImageView
+        android:id="@+id/bPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/bMinus"
+        android:layout_marginRight="62dp"
+        android:src="@drawable/plusimg" />
+
+    <ImageView
+        android:id="@+id/bMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bUp"
+        android:layout_marginRight="19dp"
+        android:layout_toLeftOf="@+id/bPlus"
+        android:src="@drawable/minusimg" />
+
+    <ImageView
+        android:id="@+id/bSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/searchimg"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/bMinus" />
+
+    <TextView
+        android:id="@+id/tvLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="Arial"
+        android:padding="5dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_above="@+id/cbAppMode"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginBottom="131dp" />
+
+</RelativeLayout>

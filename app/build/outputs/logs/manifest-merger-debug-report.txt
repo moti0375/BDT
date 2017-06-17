@@ -1,0 +1,113 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:2:1-32:12
+	package
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:3:5-22
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.3.1] /Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/motibartov/.android/build-cache/10c777aa0e08e0c90e1071a089748fd4f907a035/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/motibartov/.android/build-cache/596aadc2c79d97d33fcb6725aec47c807884b84e/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/motibartov/.android/build-cache/e1f38fbc9e8bd9b7e060b8677af59d421b178aa2/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/motibartov/.android/build-cache/42044d2a548b61ecccb8c7de122938042d29d67a/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /Users/motibartov/.android/build-cache/5fffc7bdf244149df307832c2a6dc3eee0388ec9/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/motibartov/.android/build-cache/1f39f06c55d3163e25b714dafb77586cf87e2136/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/motibartov/.android/build-cache/db1b433d692ceccc15199a068977ff68f817f911/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/motibartov/.android/build-cache/72ea34fd38e8d0e7221c58228d3ee8ddcd28a59b/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/motibartov/.android/build-cache/ce8f198754cd06a73536586fb314d75e40c76c71/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/motibartov/.android/build-cache/68479a5107ccf8ece43e1101e21ea13a6c042f4c/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:11:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:12:22-71
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:14:22-78
+application
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:16:5-30:19
+MERGED from [com.android.support:design:25.3.1] /Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/motibartov/.android/build-cache/10c777aa0e08e0c90e1071a089748fd4f907a035/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/motibartov/.android/build-cache/596aadc2c79d97d33fcb6725aec47c807884b84e/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/motibartov/.android/build-cache/42044d2a548b61ecccb8c7de122938042d29d67a/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/motibartov/.android/build-cache/5fffc7bdf244149df307832c2a6dc3eee0388ec9/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/motibartov/.android/build-cache/1f39f06c55d3163e25b714dafb77586cf87e2136/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/motibartov/.android/build-cache/db1b433d692ceccc15199a068977ff68f817f911/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/motibartov/.android/build-cache/72ea34fd38e8d0e7221c58228d3ee8ddcd28a59b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/motibartov/.android/build-cache/ce8f198754cd06a73536586fb314d75e40c76c71/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/motibartov/.android/build-cache/68479a5107ccf8ece43e1101e21ea13a6c042f4c/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:19:9-41
+	android:allowBackup
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:17:9-35
+	android:icon
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:18:9-44
+	android:theme
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:20:9-40
+activity#com.wdt.MainActivity
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:21:9-29:20
+	android:screenOrientation
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:24:13-50
+	android:label
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:23:13-45
+	android:name
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:22:13-48
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:25:13-28:29
+action#android.intent.action.MAIN
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:27:27-74
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/motibartov/.android/build-cache/10c777aa0e08e0c90e1071a089748fd4f907a035/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/motibartov/.android/build-cache/596aadc2c79d97d33fcb6725aec47c807884b84e/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/motibartov/.android/build-cache/e1f38fbc9e8bd9b7e060b8677af59d421b178aa2/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/motibartov/.android/build-cache/42044d2a548b61ecccb8c7de122938042d29d67a/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/motibartov/.android/build-cache/5fffc7bdf244149df307832c2a6dc3eee0388ec9/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/motibartov/.android/build-cache/1f39f06c55d3163e25b714dafb77586cf87e2136/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/motibartov/.android/build-cache/db1b433d692ceccc15199a068977ff68f817f911/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/motibartov/.android/build-cache/72ea34fd38e8d0e7221c58228d3ee8ddcd28a59b/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/motibartov/.android/build-cache/ce8f198754cd06a73536586fb314d75e40c76c71/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/motibartov/.android/build-cache/68479a5107ccf8ece43e1101e21ea13a6c042f4c/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/AndroidManifest.xml:26:9-47

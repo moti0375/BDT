@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_minus.png",
+        "source": "/Users/motibartov/Android/workspace/WDT/app/src/main/res/drawable-xxxhdpi/ic_minus.png"
+    },
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_plus.png",
+        "source": "/Users/motibartov/Android/workspace/WDT/app/src/main/res/drawable-xxxhdpi/ic_plus.png"
+    },
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_action_settings.png",
+        "source": "/Users/motibartov/Android/workspace/WDT/app/src/main/res/drawable-xxxhdpi/ic_action_settings.png"
+    },
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_arrow_down.png",
+        "source": "/Users/motibartov/Android/workspace/WDT/app/src/main/res/drawable-xxxhdpi/ic_arrow_down.png"
+    },
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_arrow_up.png",
+        "source": "/Users/motibartov/Android/workspace/WDT/app/src/main/res/drawable-xxxhdpi/ic_arrow_up.png"
+    }
+]

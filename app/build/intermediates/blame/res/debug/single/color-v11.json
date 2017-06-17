@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    }
+]
