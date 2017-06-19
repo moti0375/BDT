@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/ecu_pref_category_title">
+
+        <ListPreference
+            android:entries="@array/device_version_entries"
+            android:entryValues="@array/device_version_values"
+            android:key="DeviceKey"
+            android:defaultValue="10"
+            android:title="@string/ecu_type_pref_title" />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

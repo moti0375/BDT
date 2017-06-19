@@ -17,8 +17,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
@@ -29,13 +32,15 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener {
+import com.wdt.settings.Devices;
+import com.wdt.settings.SettingsActivity;
+
+public class MainActivity extends AppCompatActivity implements OnClickListener,
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int REQUEST_ENABLE_BT = 1;
     private static final String TAG = "WDT";
@@ -45,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private Context context;
     private Button upButton, downButton, plusButton,
             minusButton;
+
+    ImageView ivBtStatus;
 
     private TextView output, output2;
     private ProgressDialog progressDialog;
@@ -56,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private ConnectedThread mConnectedThread;
 
     Toolbar mToolbar;
+
+    Devices mDeviceVersion = Devices.XICOY_V6;
 
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -73,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 BluetoothDevice device = (BluetoothDevice) intent
                         .getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                Log.d(TAG, "Found BT device: " + device.getName());
+                Log.d(TAG, "Found BT mDeviceVersion: " + device.getName());
                 devices.add(device);
             }
         }
@@ -88,6 +97,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        preferences.registerOnSharedPreferenceChangeListener(this);
+        updatePreferences(preferences);
+
+
         context = this;
         upButton = (Button) findViewById(R.id.bUp);
         upButton.setOnClickListener(this);
@@ -98,23 +112,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         minusButton = (Button) findViewById(R.id.bMinus);
         minusButton.setOnClickListener(this);
         output = (TextView) findViewById(R.id.tvLine1);
-//        output.setText("");
+        output.setText("");
         output.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
         output2 = (TextView) findViewById(R.id.tvLine2);
-//        output2.setText("");
+        output2.setText("");
         output2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
 
-//        cbMode = (CheckBox) findViewById(R.id.cbAppMode);
-//        cbMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if (isChecked) {
-//                    buttonView.setText("Xicoy V10");
-//                } else {
-//                    buttonView.setText("Xicoy V6");
-//                }
-//            }
-//        });
+        ivBtStatus = (ImageView) findViewById(R.id.ivBtStatus);
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
@@ -144,10 +148,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 
-        if(id == R.id.action_search_device){
+        if (id == R.id.action_search_device) {
             devices.clear();
             // List paired devices before scanning
             Set<BluetoothDevice> pairedDevices = mBluetoothAdapter
@@ -156,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             if (pairedDevices.size() > 0) {
                 // Loop through paired devices
                 for (BluetoothDevice device : pairedDevices) {
-                     devices.add(device);
+                    devices.add(device);
                 }
                 showScanResults(true);
             } else {
@@ -296,6 +302,25 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mConnectedThread.start();
     }
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        updatePreferences(sharedPreferences);
+    }
+
+    private void updatePreferences(SharedPreferences sharedPreferences) {
+        int device = Integer.valueOf(sharedPreferences.getString("DeviceKey", "10"));
+        switch (device) {
+            case 10:
+                mDeviceVersion = Devices.XICOY_V6;
+                getSupportActionBar().setTitle(getTitle() + " - Xicoy V6");
+                break;
+            case 20:
+                mDeviceVersion = Devices.XICOY_V10;
+                getSupportActionBar().setTitle(getTitle() + " - Xicoy V10");
+                break;
+        }
+    }
+
     public class ConnectThread extends Thread {
 
         private BluetoothSocket bluetoothSocket = null;
@@ -318,6 +343,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             try {
                 bluetoothSocket.connect();
                 success = true;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(MainActivity.this, R.drawable.ic_bt_conencted));
+                    }
+                });
             } catch (IOException e) {
                 Log.d(TAG, "Error connecting to socket", e);
                 try {
@@ -341,6 +372,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
             try {
                 bluetoothSocket.close();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(MainActivity.this, R.drawable.ic_bt_disconnected ));
+                    }
+                });
             } catch (IOException e) {
                 Log.d(TAG, "Error closing socket", e);
             }
@@ -395,16 +432,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                             StringBuilder sb2 = new StringBuilder();
                             for (int i = 0; i < buffer.size(); i++) {
 
-//                                if (cbMode.isChecked()) {
-//                                    Log.d(TAG, "Xicoy V10");
-//                                    buffer2[i] = ((buffer.get(i) ^ (int) 0xff) + buffer
-//                                            .get(33));
-//                                } else {
-//                                }
-
-                                Log.d(TAG, "Xicoy V6");
-                                buffer2[i] = (buffer.get(i));
-
+                                switch (mDeviceVersion) {
+                                    case XICOY_V6:
+                                        Log.d(TAG, "Xicoy V6");
+                                        buffer2[i] = (buffer.get(i));
+                                        break;
+                                    case XICOY_V10:
+                                        Log.d(TAG, "Xicoy V10");
+                                        buffer2[i] = ((buffer.get(i) ^ (int) 0xff) + buffer
+                                                .get(33));
+                                        break;
+                                    default:
+                                        buffer2[i] = (buffer.get(i));
+                                        break;
+                                }
 
                                 buffer2[i] = buffer2[i] & (int) 0xff;
 

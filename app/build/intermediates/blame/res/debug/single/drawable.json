@@ -1,15 +1,15 @@
 [
     {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/wdt_backbroud.xml",
+        "source": "/Users/motibartov/Android/workspace/WDT/app/src/main/res/drawable/wdt_backbroud.xml"
+    },
+    {
         "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
         "source": "/Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
         "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/drawable/abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/wdt_backbroud.xml",
-        "source": "/Users/motibartov/Android/workspace/WDT/app/src/main/res/drawable/wdt_backbroud.xml"
     },
     {
         "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/plus_selector.xml",
@@ -170,6 +170,10 @@
     {
         "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
         "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/preference_list_divider_material.xml",
+        "source": "/Users/motibartov/.android/build-cache/51062153ad7bdb789f0e35d434c814710f091aaf/output/res/drawable/preference_list_divider_material.xml"
     },
     {
         "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",

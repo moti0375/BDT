@@ -5,7 +5,15 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="button_width">60dp</dimen>
     <dimen name="button_height">40dp</dimen>
+    <dimen name="bt_icon_size">40dp</dimen>
     <dimen name="button_corners">4dp</dimen>
     <dimen name="buttons_stroke_width">2px</dimen>
+    <dimen name="medium_margin">10dp</dimen>
+    <dimen name="large_margin">20dp</dimen>
+    <dimen name="large_text_size">36sp</dimen>
+    <dimen name="small_padding">5dp</dimen>
+    <dimen name="buttons_bottom_margin">20dp</dimen>
+    <dimen name="buttons_side_margin">80dp</dimen>
+    <dimen name="display_side_margin">50dp</dimen>
 
 </resources>
