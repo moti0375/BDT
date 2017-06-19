@@ -1,0 +1,7 @@
+# Built application files
+/build
+app/build
+.idea/workspace.xml
+app/build/generated/
+app/build/outputs/
+app/build/tmp/
