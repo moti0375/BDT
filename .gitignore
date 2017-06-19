@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/workspace.xml
+app/build/generated/assets/
+app/build/generated/res/
+app/build/generated/source/aidl/
+app/build/generated/source/apt/
+app/build/generated/source/r/androidTest/
+app/build/generated/source/r/debug/android/support/v14/
+app/build/generated/source/r/debug/android/support/v7/preference/
+app/build/generated/source/rs/
+app/build/tmp/
