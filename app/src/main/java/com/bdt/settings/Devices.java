@@ -1,4 +1,4 @@
-package com.wdt.settings;
+package com.bdt.settings;
 
 /**
  * Created by motibartov on 17/06/2017.

@@ -1,4 +1,4 @@
-package com.wdt;
+package com.bdt;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,8 +36,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wdt.settings.Devices;
-import com.wdt.settings.SettingsActivity;
+import com.bdt.settings.Devices;
+import com.bdt.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
@@ -154,19 +154,23 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
         }
 
         if (id == R.id.action_search_device) {
-            devices.clear();
-            // List paired devices before scanning
-            Set<BluetoothDevice> pairedDevices = mBluetoothAdapter
-                    .getBondedDevices();
-            // If there are paired devices
-            if (pairedDevices.size() > 0) {
-                // Loop through paired devices
-                for (BluetoothDevice device : pairedDevices) {
-                    devices.add(device);
+            if(mBluetoothAdapter != null){
+                devices.clear();
+                // List paired devices before scanning
+                Set<BluetoothDevice> pairedDevices = mBluetoothAdapter
+                        .getBondedDevices();
+                // If there are paired devices
+                if (pairedDevices.size() > 0) {
+                    // Loop through paired devices
+                    for (BluetoothDevice device : pairedDevices) {
+                        devices.add(device);
+                    }
+                    showScanResults(true);
+                } else {
+                    scanForBTDevices();
                 }
-                showScanResults(true);
-            } else {
-                scanForBTDevices();
+            }else {
+                Toast.makeText(this, "This device doesn't has Bluetooth support", Toast.LENGTH_SHORT).show();
             }
         }
         return super.onOptionsItemSelected(item);

@@ -1,4 +1,4 @@
-#Sun Jun 18 22:25:49 IDT 2017
+#Thu Jun 22 08:31:00 IDT 2017
 file.2=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a91243a85fbb967e6158a69c81f70c0d75592185/classes.dex
 base.2=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a91243a85fbb967e6158a69c81f70c0d75592185
 file.1=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9a968971526d6c0a57462b4b05973ccab579f7b4/classes.dex

@@ -6,7 +6,7 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1497816087046"
+    timestamp="1498110106431"
     token="-1005145507754270482"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -29,7 +29,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1497814744373"
+        timestamp="1498110030520"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/motibartov/Android/workspace/WDT/app/build/outputs/apk/app-debug.apk"
@@ -70,27 +70,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1497815480577"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/motibartov/Android/workspace/WDT/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1497816087046"
+        timestamp="1498110106431"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/motibartov/Android/workspace/WDT/app/build/outputs/apk/app-debug.apk"

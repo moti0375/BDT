@@ -64,12 +64,12 @@
         "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
-        "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
-    },
-    {
         "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/motibartov/.android/build-cache/0eb35c3cb8f3eb8a22472d9c8a317fd8ebf95f9d/output/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",

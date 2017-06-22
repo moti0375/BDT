@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.wdt"
+        applicationId "com.bdt"
         minSdkVersion 14
         targetSdkVersion 14
     }

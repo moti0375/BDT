@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jun 18 23:01:28 IDT 2017
+#Thu Jun 22 08:41:48 IDT 2017
 210.set=ANDROID_RESOURCE
 282.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png
 14.set=ANDROID_RESOURCE
@@ -421,7 +421,7 @@
 235.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_media_cancel_action.xml
 158.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/color/design_tint_password_toggle.xml
 260.set=ANDROID_RESOURCE
-287.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/ic_minus.png
+287.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/design_ic_visibility.png
 210.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/layout-v17/preference_dropdown.xml
 133.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_textfield_search_material.xml
 64.set=ANDROID_RESOURCE
@@ -504,10 +504,10 @@
 28.set=ANDROID_RESOURCE
 80.base=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_
 313.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png
-236.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/ic_bt_disconnected.png
+236.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
 159.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_alert_dialog_material.xml
 270.set=ANDROID_RESOURCE
-288.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/design_ic_visibility.png
+288.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/ic_minus.png
 211.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/layout/preference_category_material.xml
 134.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_template_big_media_custom.xml
 74.set=ANDROID_RESOURCE
@@ -589,7 +589,7 @@ count=322
 38.set=ANDROID_RESOURCE
 81.base=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_
 314.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_seekbar_tick_mark_material.xml
-237.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
+237.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/ic_bt_disconnected.png
 280.set=ANDROID_RESOURCE
 289.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/color/design_error.xml
 212.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png
@@ -874,7 +874,7 @@ count=322
 146.base=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_
 180.set=ANDROID_RESOURCE
 279.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable/design_snackbar_background.xml
-202.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+202.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/ic_plus.png
 125.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/preference_list_divider_material.xml
 43.set=ANDROID_RESOURCE
 4.base=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_
@@ -957,7 +957,7 @@ count=322
 301.base=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_
 224.base=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_
 190.set=ANDROID_RESOURCE
-203.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/ic_plus.png
+203.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
 126.file=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_/res/layout/preference_information.xml
 53.set=ANDROID_RESOURCE
 5.base=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/res/resources-debug.ap_

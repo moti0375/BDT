@@ -1085,11 +1085,12 @@ int string path_password_eye 0x7f07002a
 int string path_password_eye_mask_strike_through 0x7f07002b
 int string path_password_eye_mask_visible 0x7f07002c
 int string path_password_strike_through 0x7f07002d
+int string search_bt_device 0x7f07002e
 int string search_menu_title 0x7f070013
 int string status_bar_notification_info_overflow 0x7f070014
-int string v7_preference_off 0x7f07002e
-int string v7_preference_on 0x7f07002f
-int string wdt_display_title 0x7f070030
+int string v7_preference_off 0x7f07002f
+int string v7_preference_on 0x7f070030
+int string wdt_display_title 0x7f070031
 int style AlertDialog_AppCompat 0x7f0900a4
 int style AlertDialog_AppCompat_Light 0x7f0900a5
 int style Animation_AppCompat_Dialog 0x7f0900a6

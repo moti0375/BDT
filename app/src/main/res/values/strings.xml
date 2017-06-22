@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">WDT</string>
+    <string name="app_name">BDT</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="wdt_display_title">Wireless Data Terminal</string>
+    <string name="wdt_display_title">Bluetooth Data Terminal</string>
     <string name="ecu_type_pref_title">ECU Type</string>
     <string name="ecu_pref_category_title">ECU Options</string>
+    <string name="search_bt_device">Search BT Device</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.wdt.settings;
+package com.bdt.settings;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
 
-import com.wdt.R;
+import com.bdt.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

@@ -80,7 +80,7 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/motibartov/.andro
 		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:18:9-44
 	android:theme
 		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:20:9-40
-activity#com.wdt.MainActivity
+activity#com.bdt.MainActivity
 ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:21:9-29:20
 	android:screenOrientation
 		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:24:13-50
@@ -98,12 +98,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
 		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:27:27-74
-activity#com.wdt.settings.SettingsActivity
-ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:30:9-32:58
+activity#com.bdt.settings.SettingsActivity
+ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:30:9-32:65
 	android:parentActivityName
-		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:32:13-55
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:32:13-62
 	android:name
-		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:31:13-54
+		ADDED from /Users/motibartov/Android/workspace/WDT/app/src/main/AndroidManifest.xml:31:13-61
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] /Users/motibartov/.android/build-cache/41cab45c033f5484877ec674dc65517516a02846/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:transition:25.3.1] /Users/motibartov/.android/build-cache/42044d2a548b61ecccb8c7de122938042d29d67a/output/AndroidManifest.xml:22:5-24:34

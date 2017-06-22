@@ -70,7 +70,6 @@
         android:layout_marginBottom="@dimen/small_padding"
         android:layout_below="@+id/display">
 
-        
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -97,7 +96,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginLeft="@dimen/large_margin">
+            android:layout_marginLeft="@dimen/medium_margin">
             <Button
                 android:id="@+id/bMinus"
                 android:layout_width="@dimen/button_width"

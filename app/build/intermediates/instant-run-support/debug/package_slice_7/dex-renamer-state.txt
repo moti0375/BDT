@@ -1,4 +1,4 @@
-#Sun Jun 18 22:51:26 IDT 2017
+#Thu Jun 22 08:31:00 IDT 2017
 base.0=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
 renamed.0=classes.dex
 file.0=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex

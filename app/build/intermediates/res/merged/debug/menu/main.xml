@@ -6,15 +6,15 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@drawable/ic_action_settings"
         android:title="@string/action_settings"/>
 
     <item
         android:id="@+id/action_search_device"
         android:orderInCategory="200"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@android:drawable/ic_menu_search"
-        android:title="@string/action_settings"/>
+        android:title="@string/search_bt_device"/>
 
 </menu>
