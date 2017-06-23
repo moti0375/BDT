@@ -113,10 +113,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
         minusButton.setOnClickListener(this);
         output = (TextView) findViewById(R.id.tvLine1);
         output.setText("");
-        output.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
         output2 = (TextView) findViewById(R.id.tvLine2);
         output2.setText("");
-        output2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
 
         ivBtStatus = (ImageView) findViewById(R.id.ivBtStatus);
 

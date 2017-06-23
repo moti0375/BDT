@@ -1,7 +1,0 @@
-#Thu Jun 22 08:41:48 IDT 2017
-base.0=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a38fbe60f8e490da16f3eb0993850af4fd0dd97b
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_909ec8313bbac535c9c83b6b3df63160cb69c72b/classes.dex
-base.1=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_909ec8313bbac535c9c83b6b3df63160cb69c72b
-file.0=/Users/motibartov/Android/workspace/WDT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a38fbe60f8e490da16f3eb0993850af4fd0dd97b/classes.dex

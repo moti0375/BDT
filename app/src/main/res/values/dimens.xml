@@ -8,10 +8,11 @@
     <dimen name="bt_icon_size">40dp</dimen>
     <dimen name="button_corners">4dp</dimen>
     <dimen name="buttons_stroke_width">2px</dimen>
+    <dimen name="small_margin">5dp</dimen>
     <dimen name="medium_margin">10dp</dimen>
     <dimen name="large_margin">20dp</dimen>
-    <dimen name="large_text_size">36sp</dimen>
-    <dimen name="small_padding">5dp</dimen>
+    <dimen name="big_margin">25dp</dimen>
+    <dimen name="large_text_size">35sp</dimen>
     <dimen name="buttons_bottom_margin">20dp</dimen>
     <dimen name="buttons_side_margin">80dp</dimen>
     <dimen name="display_side_margin">50dp</dimen>
