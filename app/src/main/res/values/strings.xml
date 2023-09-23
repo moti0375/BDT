@@ -8,7 +8,9 @@
     <string name="ecu_type_pref_title">ECU Type</string>
     <string name="ecu_pref_category_title">ECU Options</string>
     <string name="search_bt_device">Search BT Device</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permissions_explanation">This app required to grant Bluetooth permissions</string>
+    <string name="permissions_yes">Yes</string>
+    <string name="permissions_no">No</string>
+    <string name="permissions_no_toast">Please provide Bluetooth permissions</string>
 
 </resources>

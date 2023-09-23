@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -15,10 +16,11 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -35,6 +37,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 
 import com.bdt.settings.Devices;
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
             .fromString("00001101-0000-1000-8000-00805f9b34fb");
 
     private Context context;
+
+    private static final int BT_PERMISSIONS_REQUEST_CODE = 100;
+
     private Button upButton, downButton, plusButton,
             minusButton;
 
@@ -66,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
     Toolbar mToolbar;
 
     Devices mDeviceVersion = Devices.XICOY_V6;
+
+    String[] btPermissions = new String[]{android.Manifest.permission.BLUETOOTH_CONNECT, Manifest.permission.BLUETOOTH_SCAN };
 
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -91,9 +99,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("myTag","BDT created");
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(com.bdt.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -103,7 +112,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
         updatePreferences(preferences);
 
 
-        context = this;
         upButton = (Button) findViewById(R.id.bUp);
         upButton.setOnClickListener(this);
         downButton = (Button) findViewById(R.id.bDown);
@@ -121,14 +129,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
-            Toast.makeText(context, "Your Device does not support BT!!!",
+            Toast.makeText(this, "Your Device does not support BT!!!",
                     Toast.LENGTH_LONG).show();
-            //   finish();
+            finish();
         } else {
-            if (!mBluetoothAdapter.isEnabled()) {
-                Intent enableBtIntent = new Intent(
-                        BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                showPermissionsDialog();
+            } else if(allPermissionsGranted()){
+                checkAndEnableBt();
             }
         }
     }
@@ -247,6 +255,67 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
                 });
         builderSingle.show();
     }
+
+    private void showPshowPermissionsDialogermissionsDialog() {
+        if(!allPermissionsGranted()){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(getString(R.string.app_name));
+            builder.setMessage(getString(R.string.permissions_explanation));
+            builder.setPositiveButton(R.string.permissions_yes, (dialog, id) -> {
+                requestAppPermissions();
+            });
+            builder.setNegativeButton(R.string.permissions_no, (dialog, id) -> {
+                finish();
+                Toast.makeText(this, getText(R.string.permissions_no_toast), Toast.LENGTH_LONG).show();
+            });
+
+            builder.create().show();
+        }
+    }
+
+    private void requestAppPermissions() {
+        requestPermissions(btPermissions, BT_PERMISSIONS_REQUEST_CODE);
+    }
+
+    private void checkAndEnableBt() {
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(
+                    BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            try{
+                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+            } catch (SecurityException e){
+                Toast.makeText(this, "Unable to enable BT, please enable BT manually", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    boolean allPermissionsGranted() {
+        for(String permission : btPermissions){
+            if(ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void showPermissionsDialog() {
+        if(!allPermissionsGranted()){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(getString(R.string.app_name));
+            builder.setMessage(getString(R.string.permissions_explanation));
+            builder.setPositiveButton(R.string.permissions_yes, (dialog, id) -> {
+                requestAppPermissions();
+            });
+            builder.setNegativeButton(R.string.permissions_no, (dialog, id) -> {
+                finish();
+                Toast.makeText(this, getText(R.string.permissions_no_toast), Toast.LENGTH_LONG).show();
+            });
+
+            builder.create().show();
+        }
+    }
+
+
 
     private void scanForBTDevices() {
         IntentFilter filter = new IntentFilter();
