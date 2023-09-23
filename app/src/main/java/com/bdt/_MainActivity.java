@@ -43,7 +43,7 @@ import androidx.preference.PreferenceManager;
 import com.bdt.settings.Devices;
 import com.bdt.settings.SettingsActivity;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener,
+public class _MainActivity extends AppCompatActivity implements OnClickListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int REQUEST_ENABLE_BT = 1;
@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
 
     private void showScanResults(boolean scan) {
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(
-                MainActivity.this);
+                _MainActivity.this);
         builderSingle.setIcon(R.drawable.ic_launcher);
         if (scan == false) {
             builderSingle.setTitle("Select BT Device:");
@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
         }
 
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                MainActivity.this, android.R.layout.select_dialog_singlechoice);
+                _MainActivity.this, android.R.layout.select_dialog_singlechoice);
         for (BluetoothDevice d : devices) {
             arrayAdapter.add(d.getName());
         }
@@ -254,23 +254,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
                     mConnectThread.start();
                 });
         builderSingle.show();
-    }
-
-    private void showPshowPermissionsDialogermissionsDialog() {
-        if(!allPermissionsGranted()){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle(getString(R.string.app_name));
-            builder.setMessage(getString(R.string.permissions_explanation));
-            builder.setPositiveButton(R.string.permissions_yes, (dialog, id) -> {
-                requestAppPermissions();
-            });
-            builder.setNegativeButton(R.string.permissions_no, (dialog, id) -> {
-                finish();
-                Toast.makeText(this, getText(R.string.permissions_no_toast), Toast.LENGTH_LONG).show();
-            });
-
-            builder.create().show();
-        }
     }
 
     private void requestAppPermissions() {
@@ -314,7 +297,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
             builder.create().show();
         }
     }
-
 
 
     private void scanForBTDevices() {
@@ -407,7 +389,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(MainActivity.this, R.drawable.ic_bt_conencted));
+                        ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(_MainActivity.this, R.drawable.ic_bt_conencted));
                     }
                 });
             } catch (IOException e) {
@@ -433,7 +415,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
 
             try {
                 bluetoothSocket.close();
-                runOnUiThread(() -> ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(MainActivity.this, R.drawable.ic_bt_disconnected )));
+                runOnUiThread(() -> ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(_MainActivity.this, R.drawable.ic_bt_disconnected )));
             } catch (IOException e) {
                 Log.d(TAG, "Error closing socket", e);
             }

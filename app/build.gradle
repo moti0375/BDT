@@ -18,6 +18,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
     namespace 'com.bdt'
 }
 
@@ -28,4 +42,5 @@ dependencies {
     implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
     implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
