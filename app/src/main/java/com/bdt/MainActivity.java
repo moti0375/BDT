@@ -1,5 +1,6 @@
 package com.bdt;
 
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -19,12 +20,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.preference.PreferenceManager;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +31,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.preference.PreferenceManager;
 
 import com.bdt.settings.Devices;
 import com.bdt.settings.SettingsActivity;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
     private ProgressDialog progressDialog;
 
     private BluetoothAdapter mBluetoothAdapter;
-    private ArrayList<BluetoothDevice> devices = new ArrayList<BluetoothDevice>();
+    private ArrayList<BluetoothDevice> devices = new ArrayList<>();
 
     private ConnectThread mConnectThread;
     private ConnectedThread mConnectedThread;
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
+        setContentView(com.bdt.R.layout.activity_main);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -229,31 +230,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
 
         if (scan == true) {
             builderSingle.setPositiveButton("Search more",
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            scanForBTDevices();
-                        }
+                    (dialog, which) -> {
+                        dialog.dismiss();
+                        scanForBTDevices();
                     });
         }
 
         builderSingle.setNegativeButton("Cancel",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
+                (dialog, which) -> dialog.dismiss());
 
         builderSingle.setAdapter(arrayAdapter,
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // chosenDevice = devices.get(which);
-                        mConnectThread = new ConnectThread(devices.get(which));
-                        mConnectThread.start();
-                    }
+                (dialog, which) -> {
+                    // chosenDevice = devices.get(which);
+                    mConnectThread = new ConnectThread(devices.get(which));
+                    mConnectThread.start();
                 });
         builderSingle.show();
     }
@@ -374,12 +364,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
 
             try {
                 bluetoothSocket.close();
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(MainActivity.this, R.drawable.ic_bt_disconnected ));
-                    }
-                });
+                runOnUiThread(() -> ivBtStatus.setImageDrawable(ActivityCompat.getDrawable(MainActivity.this, R.drawable.ic_bt_disconnected )));
             } catch (IOException e) {
                 Log.d(TAG, "Error closing socket", e);
             }
@@ -415,7 +400,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
 
         @Override
         public void run() {
-            ArrayList<Integer> buffer = new ArrayList<Integer>();
+            ArrayList<Integer> buffer = new ArrayList<>();
 
             while (connectedBluetoothSocket.isConnected()) {
                 try {
@@ -464,11 +449,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,
                             }
                             final String s = sb.toString();
                             final String s2 = sb2.toString();
-                            runOnUiThread(new Runnable() {
-                                public void run() {
-                                    output.setText(s);
-                                    output2.setText(s2);
-                                }
+                            runOnUiThread(() -> {
+                                output.setText(s);
+                                output2.setText(s2);
                             });
                             buffer.clear();
                         } else {
